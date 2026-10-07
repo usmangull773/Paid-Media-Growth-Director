@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inno Supps 30 Day Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--accent:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#fff;--red:#b3261e;--green:#1f6f43;--text:#1a2433;--muted:#5a6778}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.gold{color:var(--gold);font-weight:700}
+.hl{background:#f6ecd2;color:var(--navy);font-weight:700;padding:0 4px;border-radius:3px}
+b,strong{font-weight:700}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b8c6d8;border-bottom:1px solid #22406a;padding-bottom:16px;margin-bottom:44px}
+.label{color:var(--lgold);text-transform:uppercase;letter-spacing:.14em;font-size:13px;font-weight:700}
+.hero h1{font-size:46px;line-height:1.1;margin:10px 0 16px}
+.hero .lead{font-size:20px;max-width:720px;color:#dbe4ef}
+.hero .lead span{color:var(--lgold);font-weight:700}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 36px}
+.meta span{border:1px solid #2a4c78;border-radius:999px;padding:5px 14px;font-size:13px;color:#c9d6e6}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:22px}
+.kpi .n{font-size:40px;font-weight:800;color:var(--lgold);line-height:1}
+.kpi .t{font-size:14px;color:#c9d6e6;margin-top:10px}
+
+/* section headings */
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+.num{color:var(--accent);font-weight:800;font-size:15px;letter-spacing:.1em}
+h2{font-size:32px;line-height:1.2;color:var(--navy)}
+.intro{max-width:760px;color:var(--muted);font-size:17px;margin-bottom:32px}
+.dark h2{color:#fff}.dark .num{color:var(--lgold)}.dark .intro{color:#c9d6e6}
+
+/* findings */
+.find{background:#fff;border-radius:10px;box-shadow:0 4px 18px rgba(11,31,54,.08);padding:28px;margin-bottom:22px;border-left:6px solid var(--accent)}
+.find.med{border-left-color:var(--gold)}
+.fhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.find h3{font-size:21px;color:var(--navy)}
+.tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 10px;border-radius:4px;color:#fff;background:var(--accent);white-space:nowrap}
+.tag.m{background:var(--gold);color:var(--navy)}
+.find p{color:#3a4658;margin-bottom:18px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cmp div{border-radius:8px;padding:16px}
+.bad{background:#fbeceb;border:1px solid #efc6c3}
+.good{background:#e8f3ec;border:1px solid #bcdcc8}
+.cmp h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.bad h4{color:var(--red)}.good h4{color:var(--green)}
+.cmp ul{list-style:none;font-size:15px}
+.cmp li{padding:4px 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+td{padding:10px 12px;border-bottom:1px solid #dfe6ef}
+tr:nth-child(even) td{background:#f5f8fb}
+td.r{color:var(--red);font-weight:600}td.g{color:var(--green);font-weight:600}
+.tw{overflow-x:auto}
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
+.flow .st{flex:1;min-width:120px;background:#f5f8fb;border:1px solid #d6e0eb;border-radius:8px;padding:12px;text-align:center;font-size:14px}
+.flow .st b{display:block;color:var(--navy);font-size:15px}
+.flow .st.k{background:#fbf4e2;border-color:var(--gold)}
+.flow .ar{align-self:center;color:var(--accent);font-weight:800}
+
+/* plan */
+.white{background:#fff}
+.tl{background:var(--navy);border-radius:12px;padding:26px;margin-bottom:34px;color:#fff}
+.tl h4{color:var(--lgold);font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
+.tgrid{display:grid;grid-template-columns:190px repeat(4,1fr);gap:8px 6px;align-items:center;font-size:14px}
+.tgrid .wk{color:#9fb2c9;font-size:12px;text-align:center;text-transform:uppercase;letter-spacing:.08em}
+.tgrid .lb{color:#dbe4ef}
+.bar{height:16px;background:var(--gold);border-radius:4px}
+.gap{height:16px;background:#183a63;border-radius:4px}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:22px}
+.step .sn{width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step h3{font-size:19px;color:var(--navy);margin-bottom:4px}
+.step p{color:#3a4658;font-size:15px}
+.step .why{margin-top:8px;font-size:14px;color:var(--accent);font-weight:600}
+
+/* results */
+.dark{background:var(--navy);color:#fff}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--card);border-radius:10px;padding:24px}
+.rc .lbl{font-size:12px;color:#9fb2c9;text-transform:uppercase;letter-spacing:.1em}
+.rc .big{font-size:38px;font-weight:800;color:var(--lgold);line-height:1.1;margin:8px 0 4px}
+.rc .sub{font-size:14px;color:#c9d6e6;margin-bottom:18px}
+.br{margin-bottom:12px}
+.br .bl{display:flex;justify-content:space-between;font-size:13px;color:#c9d6e6;margin-bottom:4px}
+.br .tr{height:12px;background:#0b2a4a;border-radius:4px}
+.br .fl{height:12px;background:var(--gold);border-radius:4px}
+.br .fl.dim{background:#5d7594}
+.rc .ctx{font-size:13px;color:#9fb2c9;border-top:1px solid #23466f;padding-top:12px;margin-top:6px}
+
+/* next */
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:#fff;border-top:5px solid var(--gold);border-radius:10px;padding:24px;box-shadow:0 4px 18px rgba(11,31,54,.06)}
+.nc .s{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.nc h3{font-size:19px;color:var(--navy);margin:6px 0 8px}
+.nc p{font-size:15px;color:#3a4658}
+
+.cta{background:var(--gold);color:var(--navy);padding:44px 0;text-align:center}
+.cta h2{color:var(--navy);font-size:30px;margin-bottom:6px}
+.cta p{font-size:17px;font-weight:600}
+footer{background:var(--navy);color:#b8c6d8;padding:28px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+
+@media (max-width:820px){
+ .kpis,.rgrid,.ngrid{grid-template-columns:1fr}
+ .hero h1{font-size:36px}
+ h2{font-size:26px}
+ .tgrid{grid-template-columns:110px repeat(4,1fr);font-size:12px}
+}
+@media (max-width:560px){
+ section{padding:44px 0}
+ .wrap{padding:0 16px}
+ .hero h1{font-size:30px}
+ .hero .lead{font-size:17px}
+ .cmp{grid-template-columns:1fr}
+ .step{grid-template-columns:1fr;gap:10px}
+ .flow{flex-direction:column}
+ .flow .ar{transform:rotate(90deg)}
+ .tgrid{grid-template-columns:86px repeat(4,1fr);gap:6px 3px}
+ .find{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="topbar"><span>Paid Media and Growth Plan</span><span>October 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>Inno Supps</h1>
+  <p class="lead">One senior owner for paid media, turning your creative output into <span>spend that scales on profit, not guesswork</span>.</p>
+  <div class="meta"><span>Supplements, direct to consumer</span><span>Meta, Google, YouTube, TikTok</span><span>Henderson, Nevada</span></div>
+  <div class="kpis">
+   <div class="kpi"><div class="n">16</div><div class="t">open roles posted, most of them feeding paid media</div></div>
+   <div class="kpi"><div class="n">9</div><div class="t">of those roles are video and ad creative production</div></div>
+   <div class="kpi"><div class="n">1</div><div class="t">senior owner needed to decide where every dollar of spend goes</div></div>
+  </div>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <div class="sh"><span class="num">01</span><h2>What we found</h2></div>
+  <p class="intro">Inno Supps already has the hard part: a team producing VSLs, AI video ads, static creative and landing pages at volume. The gap is <span class="hl">a single system that decides which of those assets get budget, how fast, and on which channel</span>.</p>
+
+  <div class="find">
+   <div class="fhead"><h3>Creative volume is ahead of creative testing</h3><span class="tag">High impact</span></div>
+   <p>With several editors producing ads in parallel, <strong>the number of new assets grows faster than the account can test them fairly</strong>. Without fixed kill and scale rules, winners get found late and good concepts die on small budgets.</p>
+   <div class="cmp">
+    <div class="bad"><h4>Without a testing system</h4><ul><li>New ads launched into mixed ad sets</li><li>Spend decided by gut on day two</li><li>Editors get vague feedback</li><li>Winning hooks are not reused</li></ul></div>
+    <div class="good"><h4>With a testing system</h4><ul><li>Fixed test cells per concept and hook</li><li>Kill and scale rules set by target CPA</li><li>Weekly creative scorecard for editors</li><li>Winners moved into scaling campaigns</li></ul></div>
+   </div>
+  </div>
+
+  <div class="find">
+   <div class="fhead"><h3>Reporting is built by hand</h3><span class="tag">High impact</span></div>
+   <p>Full funnel tracking has been handled through manual data entry. That means <strong>budget decisions run on yesterday's spreadsheet instead of live, matched numbers</strong> across ad platforms, the store and email.</p>
+   <div class="tw"><table>
+    <tr><th>Signal</th><th>Manual today</th><th>Proposed</th></tr>
+    <tr><td>Meta purchases</td><td class="r">Browser pixel, copied into sheets</td><td class="g">Conversions API with deduplication</td></tr>
+    <tr><td>Google and YouTube</td><td class="r">Platform reported only</td><td class="g">Enhanced conversions, GA4 matched</td></tr>
+    <tr><td>Blended view</td><td class="r">Built weekly by a VA</td><td class="g">Daily dashboard, MER and new customer CPA</td></tr>
+    <tr><td>Email and SMS</td><td class="r">Reported separately</td><td class="g">Joined to first order source</td></tr>
+   </table></div>
+  </div>
+
+  <div class="find med">
+   <div class="fhead"><h3>Landing pages are built in bursts, not tested in sequence</h3><span class="tag m">Medium impact</span></div>
+   <p>Pages are being built by several freelancers over time. Each one may be good, but <strong>without one test plan, the funnel cannot tell you which step loses the most buyers</strong>.</p>
+   <div class="flow">
+    <div class="st"><b>Ad</b>hook and angle</div><div class="ar">&rarr;</div>
+    <div class="st"><b>VSL or advertorial</b>belief building</div><div class="ar">&rarr;</div>
+    <div class="st k"><b>Offer page</b>bundle and price test</div><div class="ar">&rarr;</div>
+    <div class="st"><b>Checkout</b>upsell and AOV</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="white">
+ <div class="wrap">
+  <div class="sh"><span class="num">02</span><h2>The 30 day plan</h2></div>
+  <p class="intro">Four weeks, sequenced so tracking is fixed before budget moves, and budget moves before scale.</p>
+
+  <div class="tl">
+   <h4>Timeline</h4>
+   <div class="tgrid">
+    <div></div><div class="wk">Week 1</div><div class="wk">Week 2</div><div class="wk">Week 3</div><div class="wk">Week 4</div>
+    <div class="lb">Audit and tracking</div><div class="bar"></div><div class="bar"></div><div class="gap"></div><div class="gap"></div>
+    <div class="lb">Creative test system</div><div class="gap"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    <div class="lb">Budget reallocation</div><div class="gap"></div><div class="gap"></div><div class="bar"></div><div class="bar"></div>
+    <div class="lb">Funnel tests</div><div class="gap"></div><div class="gap"></div><div class="bar"></div><div class="bar"></div>
+    <div class="lb">90 day roadmap</div><div class="gap"></div><div class="gap"></div><div class="gap"></div><div class="bar"></div>
+   </div>
+  </div>
+
+  <div class="steps">
+   <div class="step"><div class="sn">1</div><div><h3>Account and tracking audit</h3><p>Review every ad account, pixel, Conversions API setup, GA4 and store data. Match platform purchases to real orders and set one source of truth for CPA and MER.</p><div class="why">Why: every later decision depends on numbers you can trust.</div></div></div>
+   <div class="step"><div class="sn">2</div><div><h3>Creative testing system</h3><p>Build a test structure by concept, hook and format, with clear kill and scale thresholds. Give the editing team a weekly scorecard showing which hooks, openers and lengths win.</p><div class="why">Why: turns your editors' volume into a steady supply of proven ads.</div></div></div>
+   <div class="step"><div class="sn">3</div><div><h3>Budget reallocation by product and channel</h3><p>Set target CPA and MER per hero product. Move budget toward proven winners on Meta, then add Google Search, Shopping and YouTube for VSL traffic where demand already exists.</p><div class="why">Why: spend follows profit, not habit.</div></div></div>
+   <div class="step"><div class="sn">4</div><div><h3>Funnel and offer tests</h3><p>Run one test at a time on the step losing the most buyers: advertorial angle, offer bundle, or checkout upsell. Each test gets a clear win metric before it starts.</p><div class="why">Why: a better conversion rate lowers CPA on every channel at once.</div></div></div>
+   <div class="step"><div class="sn">5</div><div><h3>Reporting cadence and 90 day roadmap</h3><p>Daily dashboard, weekly performance review with the team, and a written 90 day plan for scaling spend with clear CPA guardrails.</p><div class="why">Why: leadership sees the same numbers the media buyer sees.</div></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <div class="sh"><span class="num">03</span><h2>Comparable results</h2></div>
+  <p class="intro">Verified results from accounts I manage or have managed.</p>
+  <div class="rgrid">
+   <div class="rc">
+    <div class="lbl">eCommerce scale</div>
+    <div class="big">$15.5M</div>
+    <div class="sub">ad spend managed across 12 years in eCommerce</div>
+    <div class="br"><div class="bl"><span>Total campaigns</span><span>977</span></div><div class="tr"><div class="fl" style="width:100%"></div></div></div>
+    <div class="br"><div class="bl"><span>Verified revenue, 2022</span><span>$5.6M</span></div><div class="tr"><div class="fl" style="width:72%"></div></div></div>
+    <div class="ctx">9.2x peak return on ad spend, medical aesthetics.</div>
+   </div>
+   <div class="rc">
+    <div class="lbl">Tracking rebuild, cost per conversion</div>
+    <div class="big">$46.15</div>
+    <div class="sub">down from $99.97, a 53.8% reduction</div>
+    <div class="br"><div class="bl"><span>Before</span><span>$99.97</span></div><div class="tr"><div class="fl dim" style="width:100%"></div></div></div>
+    <div class="br"><div class="bl"><span>After</span><span>$46.15</span></div><div class="tr"><div class="fl" style="width:46%"></div></div></div>
+    <div class="ctx">Cosmetic surgery clinic, bidding moved from micro conversions to confirmed bookings.</div>
+   </div>
+   <div class="rc">
+    <div class="lbl">Confirmed bookings</div>
+    <div class="big">+140%</div>
+    <div class="sub">confirmed bookings, 5 to 12, on level ad spend</div>
+    <div class="br"><div class="bl"><span>Conversion rate before</span><span>1.50%</span></div><div class="tr"><div class="fl dim" style="width:23%"></div></div></div>
+    <div class="br"><div class="bl"><span>Conversion rate after</span><span>6.54%</span></div><div class="tr"><div class="fl" style="width:100%"></div></div></div>
+    <div class="ctx">Top ad group: 7.42x return on ad spend, $18,973.20 conversion value.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="sh"><span class="num">04</span><h2>What happens next</h2></div>
+  <div class="ngrid">
+   <div class="nc"><div class="s">Step 1</div><h3>A short call</h3><p>30 minutes on your current channels, hero products, target CPA and how the creative team works today.</p></div>
+   <div class="nc"><div class="s">Step 2</div><h3>Read only access</h3><p>View access to Meta, Google Ads, GA4 and the store. Nothing changes in the accounts during the audit.</p></div>
+   <div class="nc"><div class="s">Step 3</div><h3>First week findings</h3><p>A written tracking and creative audit within five working days, with the first budget moves ranked by expected impact.</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="cta"><div class="wrap"><h2>Let's have a quick call</h2><p>Reply to my message with a time that suits you.</p></div></div>
+
+<footer><div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div></footer>
+
+</body>
+</html>
